@@ -11,7 +11,7 @@ export function getSharedAudio() {
 
 export function playTrackFile(file: string) {
   const el = getSharedAudio()
-  const next = new URL(`/audio/${file}`, window.location.href).href
+  const next = new URL(`${import.meta.env.BASE_URL}audio/${file}`, window.location.origin).href
   if (el.src !== next) {
     el.src = next
     el.load()

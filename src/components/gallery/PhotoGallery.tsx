@@ -5,7 +5,7 @@ import { birthdayConfig, type PhotoSlot } from '../../config/birthday'
 import { SectionHeading } from '../ui/SectionHeading'
 
 function photoSrc(file: string) {
-  return `/images/${file}`
+  return `${import.meta.env.BASE_URL}images/${file}`
 }
 
 function TiltCard({
